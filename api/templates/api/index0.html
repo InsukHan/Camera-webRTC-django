@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1"/>
+    <title>Mobile First Camera Template</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'api/style.css' %}" />
+  </head>
+  <body>
+    <div id="container">
+        <video autoplay playsinline></video>
+        <button id="showVideo">Open camera</button>
+        <div id="errorMsg"></div>
+        <p>Display the video stream from <code>getUserMedia()</code> in a video element.</p>
+    </div>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="{% static 'api/main.js' %}"></script>
+  </body>
+</html>
